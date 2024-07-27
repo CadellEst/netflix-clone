@@ -8,13 +8,15 @@ import {
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { toast } from "react-toastify";
 
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDYxc1h3P-h-z8Ut5p3BNNuocEMq9TBwRo",
-  authDomain: "netflixclone-40cdc.firebaseapp.com",
-  projectId: "netflixclone-40cdc",
-  storageBucket: "netflixclone-40cdc.appspot.com",
-  messagingSenderId: "565233178890",
-  appId: "1:565233178890:web:4ec35a4b3a39fbde6ec2f3",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
