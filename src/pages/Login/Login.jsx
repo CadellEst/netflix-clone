@@ -10,6 +10,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const guestEmail = "guest@mail.com"
+  const guestPassord = "guest123"
 
   const user_auth = async (event) => {
     event.preventDefault();
@@ -20,6 +22,11 @@ const Login = () => {
       await signup(name, email, password);
     }
     setLoading(false)
+  }
+
+  const guestLogin = () => {
+      setPassword(guestPassord)
+      setEmail(guestEmail)
   }
 
   return (
@@ -92,6 +99,9 @@ const Login = () => {
               </span>
             </p>
           )}
+        </div>
+        <div>
+          <button onClick={guestLogin} type="submit">Guest Login</button>
         </div>
       </div>
     </div>
